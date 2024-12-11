@@ -25,7 +25,7 @@ The following *Quick Start* guide is aimed at experienced users wanting to run {
 <!-- Quick start guide for experienced users -->
 ## **Quick Start**
 
-### Required setup for running {{ model }}:
+### Required setup for running {{ model }}
 
 - **Join relevant NCI projects:**<br> _access_, _hr22_, _ki32_, _ki32\_mosrs_, _rt52_, _zz93_ and _vk83_ 
 
@@ -99,9 +99,9 @@ All {{model}} configurations are open source, licensed under [CC BY 4.0](https:/
 {{ model }} release notes are [available on the ACCESS-Hive Forum](https://forum.access-hive.org.au/t/access-esm1-5-release-information/2352) and are updated when new releases are made available.
 -->
 
-The {{model}} configuration comprises a Regional Ancillary Suite (RAS) `{{ ras_id }}` and a Regional Nesting Suite (RNS) `{{ rns_id }}`, which are run in two separate steps:
+{{model}} comprises a Regional Ancillary Suite (RAS) `{{ ras_id }}` and a Regional Nesting Suite (RNS) `{{ rns_id }}`, which are run in two separate steps:
 
-1. Ancillary files specific to the domain of interest need to be generated first by running the [RAS](#ras).
+1. First, the [RAS](#ras) is run to generate ancillary files specific to the domain of interest.
 
 2. A regional forecast specific to the domain of interest is then run using the [RNS](#rns).
 
