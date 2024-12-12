@@ -235,10 +235,9 @@ For example, if the user `abc123` started a persistent session named `cylc` unde
     <terminal-line data="input" linedelay="1000">cat ~/.persistent-sessions/cylc-session</terminal-line>
     <terminal-line data="output">cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
 </terminal-window>
+
 <!-- need to update example with echo command
-
 For example, if the user `abc123` started a persistent session named `cylc` under the project `xy00`, the command will be:
-
 <terminal-window data="input">
     <terminal-line>cat > ~/.persistent-sessions/cylc-session <<< cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
     <terminal-line data="input" linedelay="1000">cat ~/.persistent-sessions/cylc-session</terminal-line>
