@@ -655,9 +655,11 @@ TODO
 <!-- Use the same names for `nested_region` `science_choice` and `nest_name` as the one used above for the RAS and make sure all of the are referenced in the RAS and there are clear instructions on how to modify them. There is no reference for how to change the `science_choice`. If it cannot be changed, I would call it in a different way. Add links -->
 
 Each of the `<nest_name>` directory has the following subdirectories:
-    -  initial conditions `ics` &rarr; initial conditions
-    - lateral boundary conditions`lbcs` &rarr; lateral boundary conditions
-    - model output data &rarr;`um` &rarr; model output data
+
+-  initial conditions `ics` &rarr; initial conditions
+- lateral boundary conditions`lbcs` &rarr; lateral boundary conditions
+- model output data &rarr;`um` &rarr; model output data
+
 <!--
 TODO
 {: style="color:red"}
