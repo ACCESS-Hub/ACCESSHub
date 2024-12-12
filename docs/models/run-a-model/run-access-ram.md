@@ -401,7 +401,8 @@ To access a specific task, click on the arrow next to the task to extend the dro
 TODO
 {: style="color:red"}
 <!-- Replace with a RAS video/gif -->
-<!--    
+
+
 #### Through the suite directory
 The suite's log directories are stored in `~/cylc-run/<suite-ID>` as `log.<TIMESTAMP>`, and the latest set of logs are also symlinked in the `~/cylc-run/<suite-ID>/log` directory.<br>
 The logs for the main job can be found in the `~/cylc-run/<suite-ID>/log/job` directory.<br>
@@ -409,6 +410,7 @@ Logs are separated into simulation cycles according to their starting dates, the
 
 In the example above, a failure occurred for the *Lismore* default example (no real starting date is used, so the cycle is set to `1`), in the TASK_NAME task. Therefore, the `job.err` and `job.out` files can be found in the `~/cylc-run/<suite-ID>/log/job/NN/1/TASK_NAME/NN` directory.
 
+<!-- 
 TODO
 {: style="color:red"}
 <!-- Replace TASK_NAME with the actual task name according to the video/gif above -->
@@ -555,7 +557,7 @@ TODO
 This section describes how to modify the RAS configuration.<br>
 The modifications discussed in this section can change the way the RAS is run and, as a result, control the ancillaries that are generated.
 
-In general, ACCESS modelling suites can be edited either by directly modifying the congiguration files within the [suite directory](#suitedir), or by using the [_Rose_ GUI](#rosegui).
+In general, ACCESS modelling suites can be edited either by directly modifying the configuration files within the [suite directory](#suitedir), or by using the [_Rose_ GUI](#rosegui).
 
 !!! warning 
     Unless you are a very expert user, directly modifying configuration files is usually discouraged to avoid incurring in errors.
@@ -608,8 +610,10 @@ TODO
 
 To change these parameters, edit the `_rg01_name_` and `_rg01_centre_` fields in _suite conf &rarr; Regional Ancillary Suite &rarr; Nested region 1 setup_, and click the _Save_ button ![Save button](/assets/run_access_cm/save_button.png){: style="height:1em"}.
 
-
+<!-- 
 For example, to run an {{ model }} suite for a region with centre (-12.4, 130.8) and name "Darwin":
+-->
+
 ![Rose change region centre example](/assets/run_access_ras/ras_edit_region_center_and_name.gif){: class="example-img" loading="lazy"}
 
 <!--
@@ -651,15 +655,15 @@ TODO
 <!-- Use the same names for `nested_region` `science_choice` and `nest_name` as the one used above for the RAS and make sure all of the are referenced in the RAS and there are clear instructions on how to modify them. There is no reference for how to change the `science_choice`. If it cannot be changed, I would call it in a different way. Add links -->
 
 Each of the `<nest_name>` directory has the following subdirectories:
-- `ics` &rarr; initial conditions
-- `lbcs` &rarr; lateral boundary conditions
-- `um` &rarr; model output data
+   - `ics` &rarr; initial conditions
+   - `lbcs` &rarr; lateral boundary conditions
+   - `um` &rarr; model output data
 <!--
 TODO
 {: style="color:red"}
 <!-- Use the same names for `nested_region` `science_choice` and `nest_name` as the one used above for the RAS and make sure all of the are referenced in the RAS and there are clear instructions on how to modify them. Add links -->
 
-The model output data for the `Lismore` `nested_region`, using a `RAL3P2` `scienc_choice` and `d0198` as a `nest_name`, will be stored in `/scratch/$PROJECT/$USER/cylc-run/<suite-ID>/share/cycle/20220226T0000Z/Lismore/d0198/RAL3P2/um`.
+The model output data for the `Lismore` `nested_region`, using a `RAL3P2` `science_choice` and `d0198` as a `nest_name`, will be stored in `/scratch/$PROJECT/$USER/cylc-run/<suite-ID>/share/cycle/20220226T0000Z/Lismore/d0198/RAL3P2/um`.
 
 The RNS atmospheric output data files are typically in the [UM fieldsfile](https://code.metoffice.gov.uk/doc/um/latest/papers/umdp_F03.pdf) format.
 
@@ -668,7 +672,7 @@ The RNS atmospheric output data files are typically in the [UM fieldsfile](https
 This section describes how to modify the RNS configuration.
 The modifications discussed in this section can change the way the RNS is run, or how its specific [model components] are configured and coupled together.
 
-In general, ACCESS modelling suites can be edited either by directly modifying the congiguration files within the suite directory, or by using the [_Rose_ GUI](#rosegui).
+In general, ACCESS modelling suites can be edited either by directly modifying the configuration files within the suite directory, or by using the [_Rose_ GUI](#rosegui).
 
 !!! warning
     Unless you are a very expert user, directly modifying configuration files is usually discouraged to avoid incurring in errors.
