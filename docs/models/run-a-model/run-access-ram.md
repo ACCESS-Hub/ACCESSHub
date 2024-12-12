@@ -231,7 +231,7 @@ For example, if the user `abc123` started a persistent session named `cylc` unde
 
 <terminal-window data="input">
     <terminal-line>echo "cylc.abc123.xy00.ps.gadi.nci.org.au" > ~/.persistent-sessions/cylc-session
-    cat > ~/.persistent-sessions/cylc-session <<< cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
+    </terminal-line>
     <terminal-line data="input" linedelay="1000">cat ~/.persistent-sessions/cylc-session</terminal-line>
     <terminal-line data="output">cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
 </terminal-window>
