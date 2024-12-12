@@ -27,10 +27,10 @@ The following *Quick Start* guide is aimed at experienced users wanting to run {
 
 ### Required setup for running {{ model }}
 
-- **Join relevant NCI projects:**<br> _access_, _hr22_, _ki32_, _ki32\_mosrs_, _rt52_, _zz93_ and _vk83_ 
+- **Join relevant NCI projects**<br> _access_, _hr22_, _ki32_, _ki32\_mosrs_, _rt52_, _zz93_ and _vk83_ 
 
-- **Start a new [persistent session](https://opus.nci.org.au/display/Help/Persistent+Sessions) on *Gadi***<br> 
-using a login node or an ARE terminal instance:
+- **Start a new [persistent session](https://opus.nci.org.au/display/Help/Persistent+Sessions)**<br> 
+using a *Gadi* login node or an ARE terminal instance:
 ```
 persistent-sessions start <name>
 ```
@@ -38,6 +38,12 @@ This will use your default project. Use option `-p` to assign a different projec
 ```
 persistent-sessions start -p <project> <name>
 ```
+- **Assign the persistent session**<br>
+
+```
+echo "<name>.${USER}.<project>.ps.gadi.nci.org.au" > ~/.persistent-sessions/cylc-session
+```
+substituting `<name>` with the name given to the persistent session, and `<project>` with the project assigned to it.
 - **Cylc setup**<br>
 To get the required _Cylc_ setup, run:
 ```
@@ -215,11 +221,21 @@ The label of a newly-created persistent session has the following format: <br>
 ### Specify target persistent session
 
 After starting the persistent session, it is essential to assign it to the {{ model }} run.<br>
-The easiest way to do this is to insert the persistent session label into the file `~/.persistent-sessions/cylc-session`.<br>
+The easiest way to create a file `~/.persistent-sessions/cylc-session` that contains the target of the persistent session.<br>
 You can do it manually, or by running the following command (by substituting `<name>` with the name given to the persistent session, and `<project>` with the project assigned to it):
 ```
-cat > ~/.persistent-sessions/cylc-session <<< "<name>.${USER}.<project>.ps.gadi.nci.org.au"
+echo "<name>.${USER}.<project>.ps.gadi.nci.org.au" > ~/.persistent-sessions/cylc-session
 ```
+
+For example, if the user `abc123` started a persistent session named `cylc` under the project `xy00`, the command will be:
+
+<terminal-window data="input">
+    <terminal-line>echo "cylc.abc123.xy00.ps.gadi.nci.org.au" > ~/.persistent-sessions/cylc-session
+    cat > ~/.persistent-sessions/cylc-session <<< cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
+    <terminal-line data="input" linedelay="1000">cat ~/.persistent-sessions/cylc-session</terminal-line>
+    <terminal-line data="output">cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
+</terminal-window>
+<!-- need to update example with echo command
 
 For example, if the user `abc123` started a persistent session named `cylc` under the project `xy00`, the command will be:
 
@@ -228,7 +244,7 @@ For example, if the user `abc123` started a persistent session named `cylc` unde
     <terminal-line data="input" linedelay="1000">cat ~/.persistent-sessions/cylc-session</terminal-line>
     <terminal-line data="output">cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
 </terminal-window>
-
+--->
 For more information on how to specify the target session, refer to [Specify Target Session with Cylc7 Suites](https://opus.nci.org.au/display/DAE/Run+Cylc7+Suites#RunCylc7Suites-SpecifyTargetSession).
 
 !!! tip
