@@ -29,7 +29,8 @@ The following *Quick Start* guide is aimed at experienced users wanting to run {
 
 - **Join relevant NCI projects:**<br> _access_, _hr22_, _ki32_, _ki32\_mosrs_, _rt52_, _zz93_ and _vk83_ 
 
-- **Start a new persistent session on *Gadi***<br> using a login node or an ARE terminal instance:
+- **Start a new [persistent session](https://opus.nci.org.au/display/Help/Persistent+Sessions) on *Gadi***<br> 
+using a login node or an ARE terminal instance:
 ```
 persistent-sessions start <name>
 ```
@@ -59,7 +60,7 @@ rosie checkout {{ ras_id }}
 rosie copy {{ ras_id }}
 ```
 2. **Run the RAS**<br>
-From within the suite directory:
+From within the RAS directory:
 ```
 rose suite-run
 ```
@@ -75,7 +76,7 @@ rosie checkout {{ rns_id }}
 rosie copy {{ rns_id }}
 ```
 2. **Run the RNS**<br>
-From within the suite directory:
+From within the RNS directory:
 ```
 rose suite-run
 ```
@@ -169,7 +170,7 @@ To open the terminal, click on the black terminal icon at the top of the window.
 
 ![Open ARE VDI terminal example](/assets/run_access_cm/open_are_vdi_terminal.gif){: class="example-img" loading="lazy"}
 
-## Set up persistent session
+## Set up persistent session 
 To support the use of long-running processes, such as ACCESS model runs, NCI provides a service on _Gadi_ called [persistent sessions](https://opus.nci.org.au/display/Help/Persistent+Sessions).
 
 To run {{ model }}, you need to start a persistent session and set it as the target session for the model run.
@@ -235,6 +236,9 @@ For more information on how to specify the target session, refer to [Specify Tar
     After specifying the {{ model }} target persistent session the first time, to run {{ model }} you just need to make sure to have an active persistent session named like the specified {{ model }} target persistent session.
 
 ### Terminate a persistent session
+!!! tip
+    Logging out of a *Gadi* login node or an ARE terminal instance will not affect your persistent session. 
+
 To stop a persistent session, run:
 ```
 persistent-sessions kill <persistent-session-uuid>
@@ -408,7 +412,9 @@ The suite's log directories are stored in `~/cylc-run/<suite-ID>` as `log.<TIMES
 The logs for the main job can be found in the `~/cylc-run/<suite-ID>/log/job` directory.<br>
 Logs are separated into simulation cycles according to their starting dates, then divided into subdirectories according to the task name. They are then further separated into "attempts" (consecutive failed/successful tasks), where `NN` is a symlink to the most recent attempt.
 
-In the example above, a failure occurred for the *Lismore* default example (no real starting date is used, so the cycle is set to `1`), in the TASK_NAME task. Therefore, the `job.err` and `job.out` files can be found in the `~/cylc-run/<suite-ID>/log/job/NN/1/TASK_NAME/NN` directory.
+For the above *Lismore* default example, the `<cycle-basedate>` was set to `1` and no real starting date was used. Since the suite failed, the `job.err` and `job.out` files can be found in the `~/cylc-run/<suite-ID>/log/job/NN/<cycle-basedate>/TASK_NAME/NN` directory.
+
+For a subsequent run, the `<cycle-basedate>` directory gets compressed to `job-<cylc-basedate>.tar.gz` and stored in the `~/cylc-run/<suite-ID>/log/` directory.
 
 <!-- 
 TODO
