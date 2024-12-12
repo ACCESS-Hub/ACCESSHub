@@ -39,11 +39,12 @@ This will use your default project. Use option `-p` to assign a different projec
 persistent-sessions start -p <project> <name>
 ```
 - **Assign the persistent session**<br>
-
+Run the following command:
 ```
 echo "<name>.${USER}.<project>.ps.gadi.nci.org.au" > ~/.persistent-sessions/cylc-session
 ```
-substituting `<name>` with the name given to the persistent session, and `<project>` with the project assigned to it.
+substituting `<name>` with the name given to your persistent session, and `<project>` with the project assigned to it.
+
 - **Cylc setup**<br>
 To get the required _Cylc_ setup, run:
 ```
@@ -236,7 +237,8 @@ For example, if the user `abc123` started a persistent session named `cylc` unde
     <terminal-line data="output">cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
 </terminal-window>
 
-<!-- need to update example with echo command
+<!-- Updated example with echo command instead of cat
+<!-- 
 For example, if the user `abc123` started a persistent session named `cylc` under the project `xy00`, the command will be:
 <terminal-window data="input">
     <terminal-line>cat > ~/.persistent-sessions/cylc-session <<< cylc.abc123.xy00.ps.gadi.nci.org.au</terminal-line>
