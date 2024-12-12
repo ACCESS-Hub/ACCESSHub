@@ -656,9 +656,9 @@ TODO
 
 Each of the `<nest_name>` directory has the following subdirectories:
 
--  initial conditions `ics` &rarr; initial conditions
-- lateral boundary conditions`lbcs` &rarr; lateral boundary conditions
-- model output data &rarr;`um` &rarr; model output data
+- `ics` &rarr; initial conditions
+- `lbcs` &rarr; lateral boundary conditions
+- `um` &rarr; model output data
 
 <!--
 TODO
