@@ -10,10 +10,70 @@ https://access-hive.org.au/
 The ACCESS-Hive Docs website hosts the documentation for ACCESS users: getting set up, running models and model evaluation.
 
 # How to Contribute
+### 1. For New Users
+
 If you wish to add documentation to the ACCESS-Hive Docs website check the [contribution guide](https://access-hive.org.au/about/contribute/) for instructions.
 
-## Styling guidelines for developers
+### 2. For [ACCESS-NRI GitHub Organisation](https://github.com/ACCESS-NRI) members
+
 The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). For detailed information on markdown syntax and different features, please refer to [mkdocs-material documentation](https://squidfunk.github.io/mkdocs-material/reference/).
+
+1. **Clone**
+
+    On [GitHub](https://github.com/ACCESS-NRI/access-hive.org.au), click on the **< > Code** button (top-right) and copy the SSH remote URL (starts with git@github.com). 
+    
+    Now, run the following command in your local terminal to clone the ACCESS-Hive GitHub repository:
+
+    ```ruby
+    $ git clone git@github.com:ACCESS-NRI/access-hive.org.au.git
+    ```
+
+2. **Make changes locally**
+
+    For making changes locally, open your preferred IDE (ex. VSCode). 
+    Inside the terminal, create a new branch to make your local changes and then push it to GitHub:
+
+    ```ruby
+    # Create a new branch - <name>/<issue-summary>-<issue-no>
+
+    $ git checkout -b john/fix-title-800
+    ```
+
+    ```ruby
+    # Push the branch to upstream
+
+    $ git push --set-upstream origin john/fix-title-800  
+    ```
+
+2. **Commit and Push the changes**
+
+    Make your desired changes to the branch `john/fix-title-800`, and push the commits to remote: 
+
+    ```ruby
+    # Stage the current local directory
+
+    $ git add .
+    ```
+
+    ```ruby
+    # Commit the changes, include linked issue ID and meaningful commit descriptions.
+
+    # Avoid using general descriptions, such as "a fix", "useful change", "home page bug fixes" etc.
+
+    $ git commit -m "(#800) Camel-cased hive title!"
+    ```
+
+    ```ruby
+    # Push the changes to the remote of your branch
+
+    $ git push origin john/fix-title-800 
+
+    # or, if the remote is known
+    
+    $ git push
+    ```
+
+## Styling guidelines for developers
 
 Please follow the guidelines below to make the Hive Docs consistent among all the pages contributed by different people. 
 
