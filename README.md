@@ -45,7 +45,7 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     $ git push --set-upstream origin john/fix-title-800  
     ```
 
-2. **Commit and Push the changes**
+3. **Commit and Push the changes**
 
     Make your desired changes to the branch `john/fix-title-800`, and push the commits to remote: 
 
@@ -58,7 +58,7 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     ```ruby
     # Commit the changes, include linked issue ID and meaningful commit descriptions.
 
-    # Avoid using general descriptions, such as "a fix", "useful change", "home page bug fixes" etc.
+    # Avoid too general commit descriptions, such as 'a fix', 'useful change', 'home page bug fixes' etc.
 
     $ git commit -m "(#800) Camel-cased hive title!"
     ```
@@ -72,6 +72,30 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     
     $ git push
     ```
+
+4. **Be in sync with the `development` branch**
+
+    There are two main methods for integrating feature branch with the main branch 
+    (in our case, the active branch is `development`. The `main` branch is only updated weekly 
+    with automatic merging from `development` branch only):
+
+    - Merge (creates a merge commit for every `git pull`)
+    - Rebase (fast-forward merge, and linear history) 
+
+    Recently, we are transitioning to using `git rebase` as one of the steps in our development workflow.
+    This would give an opportunity to polish a feature branch before merging into the main, and also avoiding
+    additional merge commits in the project history.
+
+
+    Previously, using `git pull` resulted in an extra merge commit everytime
+    the main branch progressed. 
+
+    > **Caution**: Use `git rebase` carefully and never use it on the commits that have already 
+    been merged in the main branch. It would appear that the project history is abruptly changed. 
+    Don't hesitate to chat with the hive docs team if unsure... :) 
+
+    > _Reference: [Atlassian Rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)_
+
 
 ## Styling guidelines for developers
 
