@@ -117,6 +117,7 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     Don't hesitate to chat with the hive docs team if unsure... :) 
 
     > _Reference: [Atlassian Rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)_
+   , _[Atlassian Merging vs Rebasing tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)_
 
 
 ## Styling guidelines for developers
