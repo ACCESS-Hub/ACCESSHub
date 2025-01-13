@@ -10,11 +10,11 @@ https://access-hive.org.au/
 The ACCESS-Hive Docs website hosts the documentation for ACCESS users: getting set up, running models and model evaluation.
 
 # How to Contribute
-### 1. For New Users
+### I. For New Users
 
 If you wish to add documentation to the ACCESS-Hive Docs website check the [contribution guide](https://access-hive.org.au/about/contribute/) for instructions.
 
-### 2. For [ACCESS-NRI GitHub Organisation](https://github.com/ACCESS-NRI) members
+### II. For [ACCESS-NRI GitHub Organisation](https://github.com/ACCESS-NRI) members
 
 The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). For detailed information on markdown syntax and different features, please refer to [mkdocs-material documentation](https://squidfunk.github.io/mkdocs-material/reference/).
 
