@@ -107,17 +107,15 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
 
     Feel free to assign `ACCESS-NRI/WebOps` team as reviewers.
 
-7. **ADDITIONAL NOTES**
+> **Note** - The active branch is `development`. The `main` branch is only updated weekly 
+with automatic merging (from `development` branch only).
 
-    > **Note** - The active branch is `development`. The `main` branch is only updated weekly 
-    with automatic merging (from `development` branch only).
+> **Caution**: Use `git rebase` carefully and never use it on the commits that have already 
+been merged in the main branch. It would appear that the project history is abruptly changed. 
+Don't hesitate to chat with the hive docs team if unsure... :) 
 
-    > **Caution**: Use `git rebase` carefully and never use it on the commits that have already 
-    been merged in the main branch. It would appear that the project history is abruptly changed. 
-    Don't hesitate to chat with the hive docs team if unsure... :) 
-
-    > _Reference: [Atlassian Rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)_
-   , _[Atlassian Merging vs Rebasing tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)_
+> _Reference: [Atlassian Rebase tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)_
+, _[Atlassian Merging vs Rebasing tutorial](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)_
 
 
 ## Styling guidelines for developers
