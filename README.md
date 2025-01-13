@@ -92,7 +92,7 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     git checkout john/fix-title-800
 
     # Moves the entire feature branch on the tip of main branch
-    git rebase main  # or git pull --rebase
+    git rebase origin main  # or git pull --rebase
     ```
 
 5. **DEPLOYING WEBSITE PREVIEW**
