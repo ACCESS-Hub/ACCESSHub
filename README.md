@@ -18,7 +18,7 @@ If you wish to add documentation to the ACCESS-Hive Docs website check the [cont
 
 The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). For detailed information on markdown syntax and different features, please refer to [mkdocs-material documentation](https://squidfunk.github.io/mkdocs-material/reference/).
 
-1. **Clone**
+1. **CLONE**
 
     On [GitHub](https://github.com/ACCESS-NRI/access-hive.org.au), click on the **< > Code** button (top-right) and copy the SSH remote URL (starts with git@github.com). 
     
@@ -28,13 +28,13 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     $ git clone git@github.com:ACCESS-NRI/access-hive.org.au.git
     ```
 
-2. **Make changes locally**
+2. **MAKE CHANGES LOCALLY**
 
     For making changes locally, open your preferred IDE (ex. VSCode). 
-    Inside the terminal, create a new branch to make your local changes and then push it to GitHub:
+    And in the terminal, create a new branch to make your local changes and then push it to GitHub:
 
     ```ruby
-    # Create a new branch - <name>/<issue-summary>-<issue-no>
+    # Create a new branch, name it as - <name>/<issue-summary>-<issue-no>
 
     $ git checkout -b john/fix-title-800
     ```
@@ -45,7 +45,7 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     $ git push --set-upstream origin john/fix-title-800  
     ```
 
-3. **Commit and Push the changes**
+3. **COMMIT AND PUSH CHANGES**
 
     Make your desired changes to the branch `john/fix-title-800`, and push the commits to remote: 
 
@@ -58,7 +58,7 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
     ```ruby
     # Commit the changes, include linked issue ID and meaningful commit descriptions.
 
-    # Avoid too general commit descriptions, such as 'a fix', 'useful change', 'home page bug fixes' etc.
+    # Avoid general descriptions, such as 'a fix', 'useful change', 'home page bug fixes' etc.
 
     $ git commit -m "(#800) Camel-cased hive title!"
     ```
@@ -68,27 +68,49 @@ The ACCESS-Hive Docs website is built using [Material for MkDocs](https://squidf
 
     $ git push origin john/fix-title-800 
 
-    # or, if the remote is known
+    # or, if the remote is known, run 
     
     $ git push
     ```
 
-4. **Be in sync with the `development` branch**
+4. **BE IN SYNC WITH THE `development` BRANCH**
+    
+    There are two main methods for integrating feature branch with the main branch:
 
-    There are two main methods for integrating feature branch with the main branch 
-    (in our case, the active branch is `development`. The `main` branch is only updated weekly 
-    with automatic merging from `development` branch only):
-
-    - Merge (creates a merge commit for every `git pull`)
+    - Merge (creates a merge commit for every `git merge`)
     - Rebase (fast-forward merge, and linear history) 
 
     Recently, we are transitioning to using `git rebase` as one of the steps in our development workflow.
     This would give an opportunity to polish a feature branch before merging into the main, and also avoiding
     additional merge commits in the project history.
 
+    For syncing our feature branch into the main branch, use the following 
+    commands: 
 
-    Previously, using `git pull` resulted in an extra merge commit everytime
-    the main branch progressed. 
+    ```ruby
+    # Skip this step if you are already working on feature branch 
+    git checkout john/fix-title-800
+
+    # Moves the entire feature branch on the tip of main branch
+    git rebase main  # or git pull --rebase
+    ```
+
+5. **DEPLOYING WEBSITE PREVIEW**
+
+    During development, preview the changes made using [MkDocs live preview server](https://access-hive.org.au/about/contribute/contribute_on_github/#deploying-website-preview).
+
+6. **REVIEWING A FEATURE WITH THE PULL REQUEST**
+    
+    Once we are happy with the commits in the feature branch, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+    and GitHub will automatically build a preview of the documentation using
+    [GitHub Actions](https://docs.github.com/en/actions). 
+
+    Feel free to assign `ACCESS-NRI/WebOps` team as reviewers.
+
+7. **ADDITIONAL NOTES**
+
+    > **Note** - The active branch is `development`. The `main` branch is only updated weekly 
+    with automatic merging (from `development` branch only).
 
     > **Caution**: Use `git rebase` carefully and never use it on the commits that have already 
     been merged in the main branch. It would appear that the project history is abruptly changed. 
