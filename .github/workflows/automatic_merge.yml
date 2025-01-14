@@ -10,6 +10,9 @@ jobs:
   check-links:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@master
+    
     - name: Check links
       uses: ./.github/workflows/check_links.yml
 
