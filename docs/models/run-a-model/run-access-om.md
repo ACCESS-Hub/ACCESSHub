@@ -232,7 +232,7 @@ You can examine the contents of these files to check on the status of a run as i
 
 ### Model Live Diagnostics
 
-ACCESS-NRI developed the [Model Live Diagnostics](/model_evaluation/model_diagnostics) framework to check, monitor, visualise, and evaluate model behaviour and progress of ACCESS models currently running on _Gadi_.<br>
+ACCESS-NRI developed the [Model Live Diagnostics](/model_evaluation/evaluation_on_gadi/model_live_diagnostics) framework to check, monitor, visualise, and evaluate model behaviour and progress of ACCESS models currently running on _Gadi_.<br>
 For a complete documentation on how to use this framework, check the [Model Diagnostics documentation](https://med-live-diagnostics.readthedocs.io/en/latest/index.html).
 
 ### Trouble-shooting

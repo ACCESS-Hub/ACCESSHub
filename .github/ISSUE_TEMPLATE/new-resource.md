@@ -17,46 +17,79 @@ If there is a new resource you would like to add to the ACCESS-Hive Docs please 
 
 The site has an excellent in-built search facility, so the description plays an important role in people finding your resource, and assessing if this is of interest to them.
 
-The [`model_evaluation/atmosphere`](https://access-hive.org.au/model_evaluation/atmosphere/) section also has some great examples to assist with drafting your submission.
+The [`models/model_components/atmosphere`](/models/model_components/atmosphere) section also has some great examples to assist with drafting your submission.
 
-Once you have submitted this issue please [contribute the change yourself](https://access-hive.org.au/about/contribute/) if you have the time. The more the community contributes to this resource, the better it becomes and the burden to maintain and improve it Is spread more widely.
+Once you have submitted this issue please [contribute the change yourself](/about/contribute) if you have the time. The more the community contributes to this resource, the better it becomes and the burden to maintain and improve it Is spread more widely.
 
 <details>
 <summary>Click here for the current structure of categories and sub-categories</summary>
+    
+  - Getting Started: 
+    - Set Up your NCI Account
+    - Australian Research Environment (ARE)
+    - Set up Spack for building ACCESS models
 
+  - Models: 
+    - Model Configurations: 
+      - ACCESS-CM
+      - ACCESS-ESM
+      - ACCESS-OM
+    - Model Components: 
+      - Atmosphere
+      - Land
+      - Ocean
+      - Sea Ice
+      - Aerosols and Atmospheric Chemistry
+      - Biogeochemistry Land
+      - Biogeochemistry Ocean
+      - Coupler
+
+  - Run a Model: 
+    - Run ACCESS-CM
+    - Run ACCESS-ESM
+    - Run ACCESS-OM
+    - Build an ACCESS Model
+
+  - Data and Model Evaluation:
+    - Data: 
+      - Data Format and Standards   
+      - Data Variables
+      - Observational Data
+      - Accessing Model Data
+    - Model Evaluation: 
+      - ESMValTool
+      - ILAMB
+      - COSIMA cookbook
+      - Model Live Diagnostics
+      - METplus
+
+  - Tutorials:
+    - ACCESS-CM2
+    - ACCESS-NRI Intake catalog
+    - ESMValTool
+    - ILAMB
+    - Payu
+    
+  - Community Resources:
+    - Workshops and Events Archive:
+      - ACCESS Community Workshop 2023
+      - ACCESS Community Workshop 2024
+    - ACCESS-Hive Forum
+    - Working Groups
+    - Model Evaluation Links:
+      - Observational Catalogues
+      - Model Catalogues
+      - Data Formatting
+      - Evaluation Recipes
+    - External Resources
+    - Glossaries
+      
   - About:
-    - How to contribute: 
-    - Support
     - Contact
+    - User Support: 
+      - Using the Hive Forum
+    - Contribute:
+      - Contribute on GitHub
     - License
-  - Configurations: 
-    - ACCESS-ESM
-    - ACCESS-CM
-    - ACCESS-AM
-    - ACCESS-OM
-    - ACCESS-S
-  - Model Components: 
-    - Atmosphere
-    - Land
-    - Ocean
-    - Sea Ice
-    - Aerosols and Atmospheric Chemistry
-    - Biogeochemistry Land
-    - Biogeochemistry Ocean
-    - Coupler
-  - Model Evaluation & Data: 
-    - Atmosphere
-    - Land
-    - Ocean Sea-ice
-    - Biogeochemistry Ocean
-    - Data processing
-    - Data catalogs
-  - Training:
-    - ACCESS training
-    - Additional training
-    - Policies
-  - Working Groups:
-  - Resources:
-  - Events: 
-
+    
 </details>

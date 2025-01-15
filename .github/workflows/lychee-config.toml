@@ -6,7 +6,8 @@ exclude = [
     '^https://web\.archive\.org/web/',
     '^http://127\.0\.0\.1:8000',
     '^https://www.linkedin.com/',
-    '^\{\{[^\}]*\}\}',
+    '^https://www.freepik.com/',
+    '%7B%7B', # Exclude jinja templating links that have double opening curly brackets in it
 ]
 
 # Exclude these filesystem paths from getting checked.
@@ -26,7 +27,7 @@ no_progress = true
 cache = true
 
 # Discard all cached requests older than this duration.
-max_cache_age = "3d"
+max_cache_age = "1d"
 
 # Base URL or website root directory to check relative URLs.
 base = "https://access-hive.org.au/"

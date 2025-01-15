@@ -9,7 +9,8 @@
     </a>
     <a href="/community_resources/community_med/community_model_catalogs" class="vertical-card aspect-ratio1to1">
         <div class="card-image-container">
-            <img class="img-contain white-background with-padding" src="/assets/model_evaluation/model_evaluation_model_catalog.jpg" alt="Model Catalogues">
+            <img class="img-contain white-background with-padding" src="/assets/model_evaluation/model_earth.jpg" alt="Model Catalogues" 
+            title="Image source: National Oceanic and Atmospheric Administration">
         </div>
         <div class="card-text-container bold">Model Catalogues</div>
     </a>

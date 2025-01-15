@@ -145,12 +145,12 @@ nav:
       - COSIMA cookbook: model_evaluation/evaluation_on_gadi/cosima.md
       - Model Live Diagnostics: model_evaluation/evaluation_on_gadi/model_live_diagnostics.md
       - METplus: model_evaluation/evaluation_on_gadi/metplus.md
-      - Additional Resources: 
-        - Additional Resources: model_evaluation/community_med/index.md
-        - Observational Catalogues: model_evaluation/community_med/community_observational_catalogs.md
-        - Model Catalogues: model_evaluation/community_med/community_model_catalogs.md
-        - Data Formatting: model_evaluation/community_med/community_data_processing.md
-        - Evaluation Recipes: model_evaluation/community_med/community_med_recipes.md
+    - Additional Resources: 
+      - Additional Resources: model_evaluation/community_med/index.md
+      - Observational Catalogues: model_evaluation/community_med/community_observational_catalogs.md
+      - Model Catalogues: model_evaluation/community_med/community_model_catalogs.md
+      - Data Formatting: model_evaluation/community_med/community_data_processing.md
+      - Evaluation Recipes: model_evaluation/community_med/community_med_recipes.md
 
   - Tutorials:
     - tutorials/index.md
